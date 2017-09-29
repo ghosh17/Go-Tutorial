@@ -6,6 +6,8 @@ import (
 	"time"
 )
 
+//dnsdjsfnfs
+
 var wg = sync.WaitGroup{}
 var wg2 = sync.WaitGroup{}
 var deposite float64 = 23456.79
