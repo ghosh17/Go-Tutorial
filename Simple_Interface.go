@@ -19,5 +19,10 @@ func (p Person) Print() {
 func main() {
 	var i Interface = Person{"Sisyphus"}
 	i.Print()
+	//or ya can say
+	/*
+	  p:=Person{"Sisyphus"}
+	  p.Print()
+	*/
 
 }
