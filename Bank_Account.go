@@ -8,7 +8,8 @@ import (
 
 var wg = sync.WaitGroup{}
 var wg2 = sync.WaitGroup{}
-
+var deposite float64 = 23456.79
+var withdraw float64 = 0.01
 var Balance float64 = 100000.00
 
 func main() {
@@ -19,14 +20,11 @@ func main() {
 	wg.Add(2)
 	c := make(chan float64)
 
-	deposite := 23456.79
-	withdraw := 0.01
-
 	go func() {
 		time.Sleep(time.Duration(5 * time.Second))
 		for i := range c {
 			time.Sleep(time.Duration(5 * time.Second))
-			fmt.Printf("You got $%0.2f M's in your bank account", i)
+			fmt.Printf("You got $%0.2f M's in your bank account, in your bank account", i)
 			wg.Done()
 		}
 
