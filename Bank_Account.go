@@ -25,7 +25,7 @@ func main() {
 	go func() {
 		time.Sleep(time.Duration(5 * time.Second))
 		for i := range c {
-			//time.Sleep(time.Duration(5 * time.Second))
+			time.Sleep(time.Duration(5 * time.Second))
 			fmt.Printf("You got $%0.2f M's in your bank account", i)
 			wg.Done()
 		}
