@@ -2,6 +2,8 @@
 
 package main
 
+import "fmt"
+
 type Interface interface {
 	Print()
 }
@@ -10,13 +12,12 @@ type Person struct {
 	name string
 }
 
-func (p Person) Print() string {
-	return "Hello " + p.name
+func (p Person) Print() {
+	fmt.Printf("Hello %s", p.name)
 }
 
 func main() {
-	var name Person = Person{"Sisyphus"}
-	str := name.Print()
-	println(str)
+	var i Interface = Person{"Sisyphus"}
+	i.Print()
 
 }
