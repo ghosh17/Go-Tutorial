@@ -7,13 +7,23 @@ import (
 
 	"errors"
 	"bufio"
+	"strings"
 )
 
 func handleConn(conn net.Conn) {
 	defer conn.Close()
 	scanner := bufio.NewScanner(conn)
+	i:=0
 	for scanner.Scan(){
-		fmt.Println(scanner.Text())
+		ln:=scanner.Text()
+		fmt.Println(ln)
+		if(i==0){
+			method:=strings.Fields(ln)[0]
+			fmt.Println("METHOD", method)
+		}else{
+
+		}
+		i++
 	}
 }
 
