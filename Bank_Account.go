@@ -6,7 +6,6 @@ import (
 	"time"
 )
 
-//dnsdjsfnfs
 
 var wg = sync.WaitGroup{}
 var wg2 = sync.WaitGroup{}
